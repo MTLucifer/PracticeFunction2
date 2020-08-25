@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9</title>
+</head>
+<body>
+<p>Nhập mảng <input type="text" id="text"></p>
+<p>Nhập ký tự <input type="text" id="singleText"></p>
+<input type="button" onclick="displayFind()" value="Tìm">
+<br>
+<span id="result"></span>
+<script>
+    function find(array,txt){
+        let count = 0
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] == txt)
+            count ++;
+        }
+        return count;
+    }
+    function displayFind(){
+        let string = document.getElementById('text').value;
+        let single = document.getElementById('singleText').value;
+        let arrString = string.split("");
+        let check = find(arrString,single);
+        document.getElementById('result').innerHTML = check;
+
+    }
+</script>
+</body>
+</html>

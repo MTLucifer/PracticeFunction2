@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<p>Nhập bán kính: <input type="number" oninput="displayBoth()" id="number"></p>
+<span id="resultArea"></span>
+<br>
+<span id="resultPeri"></span>
+<script>
+    function areaCircle(number){
+        return number * number * 3.141592;
+    }
+    function periCircle(number){
+        return 2 * number * 3.141592;
+    }
+    function displayBoth(){
+        let area = areaCircle(+document.getElementById('number').value);
+        let peri = periCircle(+document.getElementById('number').value);
+        document.getElementById('resultArea').innerHTML = "Diện tích là: " + area;
+        document.getElementById('resultPeri').innerHTML = "Chu vi là: " + peri;
+    }
+</script>
+</body>
+</body>
+</html>

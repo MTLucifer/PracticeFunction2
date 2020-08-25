@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3</title>
+</head>
+<body>
+Nhập số cần tính: <input type="number" oninput="displayFactorial()" id="number">
+<span id="result"></span>
+<script>
+    function factorial(number){
+        if (number == 1)
+        return 1;
+        return number * factorial(number - 1);
+    }
+    function displayFactorial(){
+        let check = factorial(+document.getElementById('number').value);
+        document.getElementById('result').innerHTML = check;
+    }
+</script>
+</body>
+</html>

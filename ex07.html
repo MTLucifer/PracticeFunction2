@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7</title>
+</head>
+<body>
+Nhập số a: <input type="number" id="numa">
+<br>
+Nhập số b: <input type="number" id="numb">
+<br>
+<input type="button" onclick="displaySwap()" value="Đổi chỗ">
+<br>
+<span id="resultB"></span>
+<br>
+<span id="resultA"></span>
+<script>
+    function swap(arr) {
+        let temp=arr[0];
+        arr[0]=arr[1];
+        arr[1]=temp;
+    }
+    function displaySwap(){
+        let array = [document.getElementById('numa').value,document.getElementById('numb').value]
+        document.getElementById('resultB').innerHTML = "Trước khi hoán vị: " + array ;
+        swap(array);
+        document.getElementById('resultA').innerHTML = "Sau khi hoán vị: " + array ;
+    }
+</script>
+</body>
+</html>

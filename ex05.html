@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5</title>
+</head>
+<body>
+<p>Nhập số kiểm tra (dùng cách để cách) <input type="text" id="number">  </p>
+<input type="button" onclick="displayMin()" value="Kiểm tra">
+<br>
+<span id="result"></span>
+<script>
+    function findMin(array){
+        for (let i = 0; i < array.length; i++) {
+           min = array[0] ;
+            if (array[i] < min){
+                array[i] = min;
+            }
+        }return min;
+    }
+
+    function displayMin(){
+        let str = document.getElementById('number').value;
+        let arrStr = str.split(' ');
+        let find = findMin(arrStr);
+        document.getElementById('result').innerHTML = "Giá trị nhỏ nhất là: " + find;
+    }
+</script>
+</body>
+</html>

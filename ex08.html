@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8</title>
+</head>
+<body>
+<p>Nhập mảng số (dùng cách để cách) <input type="text" id="number">  </p>
+<input type="button" onclick="displayReverse()" value="Đảo ngược">
+<br>
+<span id="result"></span>
+<script>
+    function reverse(arr){
+        arr.reverse()
+        return arr;
+    }
+    function displayReverse(){
+        let str = document.getElementById('number').value;
+        let arrStr = str.split(' ');
+        let find = reverse(arrStr);
+        document.getElementById('result').innerHTML = "Mảng được đảo ngược là: " + find;
+    }
+</script>
+</body>
+</html>

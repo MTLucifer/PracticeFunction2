@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+Nhập số cần tính: <input type="number" oninput="displaySquare()" id="number">
+<span id="result"></span>
+<script>
+   function square(number){
+       return number * number;
+   }
+   function displaySquare(){
+       let check = square(+document.getElementById('number').value);
+       document.getElementById('result').innerHTML = check;
+   }
+</script>
+</body>
+</html>

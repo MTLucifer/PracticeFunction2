@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4</title>
+</head>
+<body>
+<p>Nhập ký tự kiểm tra: <input type="text" id="char"></p>
+<input type="button" onclick="displayCheck()" value="Kiểm tra">
+<span id="show"></span>
+<script>
+function isNumeric(char) {
+    let string = "0123456789";
+    for (let i = 0; i < char.length ; i++) {
+        if(string.indexOf(char[i])>=0)
+            return false;
+        return true;
+    }
+    }
+
+function displayCheck(){
+    let check = isNumeric(document.getElementById('char').value);
+    if (check)
+        document.getElementById('show').innerHTML = "Là ký tự";
+    else
+        document.getElementById('show').innerHTML = "Là ký tự số";
+}
+</script>
+</body>
+</html>
